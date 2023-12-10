@@ -7,7 +7,7 @@ from PIL import Image
 
 #load the model from disk
 import joblib
-model = joblib.load(r"./notebook/model.sav")
+model = joblib.load(r"./model.sav")
 
 #Import python scripts
 from preprocessing import preprocess
@@ -23,7 +23,7 @@ def main():
     st.markdown("<h3></h3>", unsafe_allow_html=True)
 
     #Setting Application sidebar default
-    image = Image.open('./Images/churn.jpeg')
+    image = Image.open('./churn.jpeg')
     add_selectbox = st.sidebar.selectbox(
 	"How would you like to predict?", ("Online", "Batch"))
     st.sidebar.info('Customer Churn prediction tool for telecom companies')
